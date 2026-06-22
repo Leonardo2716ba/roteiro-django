@@ -50,7 +50,6 @@
                 <p class="text-slate-400 text-sm">Um único <code class="font-mono bg-slate-800 px-1 rounded">docker compose up</code> e o ambiente está pronto.</p>
             </article>
         </section>
-
         <section class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8 max-w-3xl">
             <h2 class="text-2xl font-bold mb-4">Mensagens do banco de dados</h2>
             <p class="text-slate-400 text-sm mb-6">
@@ -59,24 +58,29 @@
             </p>
 
             {% if mensagens %}
-                <ul class="space-y-3">
+            <ul class="space-y-3">
                     {% for m in mensagens %}
-                        <li class="border-l-2 border-emerald-400 pl-4 py-1">
-                            <h2 class="font-semibold">{{ m.autor }}</h2>
-                            <h3 class="font-semibold">{{ m.titulo }}</h3>
-                            <p class="text-sm text-slate-300">{{ m.conteudo }}</p>
+                    <li class="border-l-2 border-emerald-400 pl-4 py-1">
+                        <h2 class="font-semibold">{{ m.autor }}</h2>
+                        <h3 class="font-semibold">{{ m.titulo }}</h3>
+                        <p class="text-sm text-slate-300">{{ m.conteudo }}</p>
                             <span class="text-xs text-slate-950">{{ m.criada_em|date:"d/m/Y H:i" }}</span>
                         </li>
                     {% endfor %}
                 </ul>
-            {% else %}
+                {% else %}
                 <div class="text-center py-8 text-slate-400">
                     <p class="mb-2">Nenhuma mensagem ainda.</p>
                     <p class="text-sm">Crie uma no <a href="/admin/" class="text-indigo-300 underline">admin</a> para vê-la aqui.</p>
                 </div>
-            {% endif %}
-        </section>
-    </main>
+                {% endif %}
+            </section>
+            <div class="mt-8">
+            <a href="/sobre/" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors">
+                Sobre este projeto
+            </a>
+            </div>
+        </main>
 
     <footer class="container mx-auto px-6 py-12 text-center text-slate-500 text-sm">
         Feito para a aula de Programação Web · Django 5.1
