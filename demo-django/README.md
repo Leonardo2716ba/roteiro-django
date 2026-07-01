@@ -21,6 +21,6 @@ Para visualizar a página
 http://localhost:8000
 
 # Screenshots
-![Sobre](screenshots/image.png)
-![Sobre](screenshots/image1.png)
-![Admin](screenshots/image2.png)
+![Sobre](demo-django/screenshots/image.png)
+![Sobre](demo-django/screenshots/image1.png)
+![Admin](demo-django/screenshots/image2.png)
